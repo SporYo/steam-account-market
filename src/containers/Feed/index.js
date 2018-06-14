@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Card from '../../components/Сard';
+import Cards from '../../components/Сard';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -12,14 +12,11 @@ class Feed extends Component {
       <Grid container>
         <Grid item xs={12}>
           <Grid container justify="center">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Cards></Cards>
+            <Cards></Cards>
+            <Cards></Cards>
+            <Cards></Cards>
+            <Cards></Cards>
           </Grid>
         </Grid>
       </Grid>
