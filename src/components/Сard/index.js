@@ -4,7 +4,6 @@ import React, {
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
-
 const Wraper = styled.div `
   background-color: rgb(42, 40, 49) ;
   border-bottom-left-radius: 8px ;
