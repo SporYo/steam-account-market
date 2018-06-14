@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Cards from '../../components/Сard';
+import SimpleMediaCard from '../../components/Сard';
 import Grid from '@material-ui/core/Grid';
 
-
+const Main = styled.div `
+background-color: #9E9E9E;
+`
 
 
 class Feed extends Component {
   render() {
     return (
-      <Grid container>
-        <Grid item xs={12}>
-          <Grid container justify="center">
-            <Cards></Cards>
-            <Cards></Cards>
-            <Cards></Cards>
-            <Cards></Cards>
-            <Cards></Cards>
+      <Main>
+        <Grid container spacing={16}>
+          <Grid item xs={12}>
+            <Grid container justify="center" spacing={16}>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+              <SimpleMediaCard></SimpleMediaCard>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Main>
     );
   }
 }
