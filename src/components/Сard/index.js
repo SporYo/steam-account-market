@@ -1,82 +1,61 @@
-import React, {
-  Component
-} from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-const Wraper = styled.div `
-  background-color: rgb(42, 40, 49) ;
-  border-bottom-left-radius: 8px ;
-  border-bottom-right-radius: 8px ;
-  border-top-left-radius: 8px ;
-  border-top-right-radius: 8px ;
-  box-shadow: rgba(0, 0, 0, 0) 0px 6px 10px 0px ;
-  box-sizing: border-box ;
-  cursor: pointer ;
-  display: block ;
-  font-family: "YS Text", Arial, Helvetica, sans-serif ;
-  height: 400.391px ;
-  margin-bottom: 8px ;
-  margin-left: 8px ;
-  margin-right: 8px ;
-  margin-top: 8px ;
-  max-height: 432px ;
-  max-width: 380px ;
-  min-height: 288px ;
-  position: relative ;
-  transform: matrix(1, 0, 0, 1, 0, 0) ;
-  transition-delay: 0s ;
-  transition-duration: 0.3s ;
-  transition-property: box-shadow ;
-  transition-timing-function: ease ;
-  width: 320px ;
-  -webkit-font-smoothing: antialiased
-;
-`
-const Title = styled.div`
-box-sizing: border-box ;
- color: rgb(0, 0, 0) ;
- cursor: pointer ;
- display: -webkit-box ;
- flex-basis: auto ;
- flex-grow: 0 ;
- flex-shrink: 0 ;
- font-family: "YS Text", Arial, Helvetica, sans-serif ;
- font-size: 36px ;
- font-weight: 700 ;
- height: 119.391px ;
- line-height: 38px ;
- margin-bottom: 5.4px ;
- overflow-x: hidden ;
- overflow-y: hidden ;
- padding-left: 18px ;
- padding-right: 10px ;
- padding-top: 5.4px ;
- text-overflow: ellipsis ;
- user-select: none ;
- white-space: normal ;
- width: 320px ;
- word-break: break-word ;
- word-wrap: break-word ;
- -webkit-box-orient: vertical ;
- -webkit-font-smoothing: antialiased ;
- -webkit-line-clamp: 4 ;
- -webkit-tap-highlight-color: rgba(0, 0, 0, 0) ;
-`
+const styles = {
+  card: {
+    maxWidth: 245,
+    marginLeft: 16,
+    marginBottom: 16,
+    marginTop: 16,
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
+};
 
-class Card extends Component {
-  render() {
-    return (
-
-      <Wraper>
-        <Title>Steam account</Title>
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-      </Wraper>
-      
-    );
-  }
+function SimpleMediaCard(props) {
+  const { classes } = props;
+  return (
+    <div>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.media}
+          image="../static/img/cards/steam.jpg"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="headline" component="h2">
+            Steam account
+          </Typography>
+          <Typography component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+        </CardActions>
+      </Card>
+    </div>
+  );
 }
 
-export default Card;
+SimpleMediaCard.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(SimpleMediaCard);
+

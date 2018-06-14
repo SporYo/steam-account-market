@@ -4,16 +4,21 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^1.2.1",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://steam-account-marketplace.github.io/steam-account-marketplace/",
   "devDependencies": {
     "styled-components": "^3.3.2"
   }
