@@ -4,9 +4,8 @@ import SimpleMediaCard from '../../components/Сard';
 import Grid from '@material-ui/core/Grid';
 
 const Main = styled.div `
-background-color: #9E9E9E;
-`
-
+  background-color: #9E9E9E;
+`;
 
 class Feed extends Component {
   render() {

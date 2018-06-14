@@ -58,3 +58,4 @@ SimpleMediaCard.propTypes = {
 };
 
 export default withStyles(styles)(SimpleMediaCard);
+
