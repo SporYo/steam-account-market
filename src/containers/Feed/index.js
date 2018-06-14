@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import Card from '../../components/Сard';
 import Grid from '@material-ui/core/Grid';
 
-
-
-
 class Feed extends Component {
   render() {
     return (
