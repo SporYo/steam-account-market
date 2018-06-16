@@ -28,7 +28,7 @@ function SimpleMediaCard(props) {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image="../static/img/cards/steam.jpg"
+          image="steamImg.png"
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -36,18 +36,19 @@ function SimpleMediaCard(props) {
             Steam account
           </Typography>
           <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            Fallout 4, GTA V, Witcher 3: Wild Hunt, Divinity: Original Sin 2...
+          </Typography>
+          <Typography component="p">
+            Цена всех игр в стиме: 15000
+          </Typography>
+          <Typography component="p">
+            Цена продавца: 100
+          </Typography>
+          <Typography component="p">
+            Кол-во игр: 234
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
-        </CardActions>
+        
       </Card>
     </div>
   );
@@ -58,4 +59,3 @@ SimpleMediaCard.propTypes = {
 };
 
 export default withStyles(styles)(SimpleMediaCard);
-
