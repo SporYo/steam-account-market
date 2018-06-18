@@ -11,9 +11,9 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 const StyledCard = styled(Card)`
-        width: 345px;
-        margin: 16px;
-        color: red;
+    width: 345px;
+    margin: 16px;
+    color: red;
 `;
 
 class Feed extends Component {
