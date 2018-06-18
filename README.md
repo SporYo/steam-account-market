@@ -1,4 +1,4 @@
-# steam account markteplace
+# Steam account markteplace
 
 Web app to trade steam accounts.
 
