@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://steam-account-marketplace.github.io/steam-account-marketplace/",
+  "homepage": "https://steam-account-marketplace-test.firebaseapp.com",
   "devDependencies": {
     "styled-components": "^3.3.2"
   }
