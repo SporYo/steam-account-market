@@ -9,11 +9,18 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
+import AddIcon from '@material-ui/icons/Add';
 
 const StyledCard = styled(Card)`
     width: 345px;
     margin: 16px;
     color: red;
+`;
+
+const StyledAddButtonWrapper = styled.div`
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
 `;
 
 class Feed extends Component {
@@ -43,6 +50,11 @@ class Feed extends Component {
   render() {
     return (
         <Grid container spacing={16}>
+            <StyledAddButtonWrapper>
+                <Button variant="fab" color="primary" aria-label="add">
+                    <AddIcon />
+                </Button>
+            </StyledAddButtonWrapper>
           <Grid item xs={12}>
             <Grid container justify="center" spacing={16}>
                 {this.state.accounts && this.state.accounts.map(account => <StyledCard key={Math.random()}>
