@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 import AddIcon from '@material-ui/icons/Add';
+import AddItemForm from "../AddItemForm";
+import CircularProgress from "@material-ui/core/es/CircularProgress/CircularProgress";
 
 const StyledCard = styled(Card)`
     width: 345px;
@@ -23,7 +25,13 @@ const StyledAddButtonWrapper = styled.div`
   right: 5%;
 `;
 
+const StyledProgressWrapper = styled.div`
+  position: fixed;
+  top: 50%;
+`;
+
 class Feed extends Component {
+
   database = null;
   constructor(props) {
     super(props);
@@ -51,13 +59,15 @@ class Feed extends Component {
     return (
         <Grid container spacing={16}>
             <StyledAddButtonWrapper>
-                <Button variant="fab" color="primary" aria-label="add">
+                <Button onClick={() => this.setState({addItemPopupOpen: true})} variant="fab" color="primary" aria-label="add">
                     <AddIcon />
                 </Button>
+                <AddItemForm open={this.state.addItemPopupOpen} handleClose={() => this.setState({addItemPopupOpen: false})}/>
             </StyledAddButtonWrapper>
           <Grid item xs={12}>
             <Grid container justify="center" spacing={16}>
-                {this.state.accounts && this.state.accounts.map(account => <StyledCard key={Math.random()}>
+
+                {this.state.accounts.length ? this.state.accounts.map(account => <StyledCard key={Math.random()}>
                     <CardMedia
                         image="http://www.kartinkijane.ru/pic/201305/1366x768/kartinkijane.ru-30552.jpg"
                         title="Contemplative Reptile"
@@ -75,7 +85,8 @@ class Feed extends Component {
                             Learn More
                         </Button>
                     </CardActions>
-                </StyledCard>)}
+                </StyledCard>)
+                : <StyledProgressWrapper><CircularProgress size={50} /></StyledProgressWrapper>}
             </Grid>
           </Grid>
         </Grid>
