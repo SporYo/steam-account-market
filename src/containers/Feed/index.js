@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 import AddIcon from '@material-ui/icons/Add';
 import AddItemForm from "../AddItemForm";
-import CircularProgress from "@material-ui/core/es/CircularProgress/CircularProgress";
+import {CircularProgress} from "@material-ui/core/";
 
 const StyledCard = styled(Card)`
     width: 345px;
